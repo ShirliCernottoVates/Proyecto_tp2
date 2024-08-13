@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  color: #333;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  padding: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #bdc3c7;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:link, a:visited, a:hover, a:active, a:focus {
+  color: #333;
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+}

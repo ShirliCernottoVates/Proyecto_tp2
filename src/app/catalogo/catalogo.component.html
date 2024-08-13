@@ -1,0 +1,12 @@
+<h2>Catalogo</h2>
+<div class="catalog">
+  @for(book of arrBooks; track $index){
+    <div class="card">
+      <div class="card-content">
+          <h4 class="card-title">{{book.title}}</h4>
+          <p class="card-text">{{book.author}}</p>
+          <p class="card-little-data">({{book.genre}} - {{book.yearPublished}})</p>
+      </div>
+    </div>
+  }
+</div>

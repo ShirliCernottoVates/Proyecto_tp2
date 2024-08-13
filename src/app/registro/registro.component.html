@@ -1,0 +1,15 @@
+<div class="form-container">
+  <form [formGroup]="myForm" (ngSubmit)="onRegistro()" class="registration-form">
+    <h2>Registro</h2>
+    @for (controlName of formControlNames; track $index) {
+      <div class="inline-text">
+        <p>{{obtenerTextoInput(controlName)}}</p> <p *ngIf="isRequired(controlName)" class="text-required">(*)</p>
+      </div>
+      <input [formControlName]="controlName" [placeholder]="controlName" [type]="controlName === 'password' ? 'password' : 'text'"/>
+      @if(myForm.get(controlName)?.errors && myForm.get(controlName)?.dirty){
+        <p class="text-error">{{obtenerError(myForm.get(controlName))}}</p>
+      }
+    }
+    <button type="submit">Registrarse</button>
+  </form>
+</div>

@@ -1,0 +1,55 @@
+.inline-text{
+  display: flex;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.text-required{
+  margin-left: 4px;
+  margin-top: 16px;
+  color: red;
+  font-size: 12px;
+}
+
+.text-error{
+  margin-top: 0;
+  color: red;
+  font-size: 0.8rem;
+}
+
+.registration-form button{
+  display: flex;
+  margin-left: 32%;
+  background-color: lightblue;
+  color:whitesmoke;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor:pointer;
+  transition: background-color 0.3s;
+}
+
+.registration-form button:hover{
+  background-color: #6a74fc;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: gainsboro;
+}
+
+.registration-form h2{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.registration-form input{
+  padding: 0.8em;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}

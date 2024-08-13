@@ -1,0 +1,10 @@
+<div class="login-container">
+  <h2 class="h2-text">Iniciar Sesión</h2>
+  <div class="login-info">
+    <p class="p-text">Ingrese su Email:</p>
+    <input [(ngModel)]="email" placeholder="ingresesumail@mail.com" [ngClass]="email ==='' ? 'error-class' : 'input-class'"/>
+    <p class="p-text">Ingrese su contraseña:</p>
+    <input [(ngModel)]="contrasenia" placeholder="Contraseña" type="password" [ngClass]="contrasenia ==='' ? 'error-class' : 'input-class'"/>
+    <button class="button-class" (click)="onIngresar()">Ingresar</button>
+  </div>
+</div>
