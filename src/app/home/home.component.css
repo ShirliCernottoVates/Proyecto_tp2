@@ -5,9 +5,55 @@
   font-family: 'Arial', sans-serif;
   background-color: lightcyan;;
   height: 100vh;
+  overflow-y: auto;
 }
 
 h2{
   text-align: center;
   color: #333;
+}
+
+.card {
+  margin-bottom: 20px;
+  height: 350px;
+}
+
+.card-title{
+  font-size: 1rem;
+  padding: 0.2rem;
+  font-weight: bold;
+}
+
+.card-text{
+  font-size: 0.8rem;
+}
+
+.card-scrollable-body {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+.class-footer{
+  background-color: whitesmoke;
+}
+
+.card-img-top{
+  width: 100px;
+}
+
+.img-class{
+  margin: auto !important;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-yellow {
+  color: yellow;
+}
+
+.text-green {
+  color: green;
 }
