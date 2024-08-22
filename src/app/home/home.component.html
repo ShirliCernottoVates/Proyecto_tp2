@@ -1,7 +1,43 @@
 <div class="class-home">
   <h2>Home</h2>
   <p>Usted actualmente se encuentra en el modulo <b>Home</b>. Si quiere cambiar de modulo solo tiene que hacer click en el nombre del modulo.</p>
-  <p>A continuación texto de relleno...</p>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <p>A continuación se listaran los productos consultados al <b>meliService</b></p>
+
+<div class="container">
+  <div class="row">
+    @if(!isLoading){
+      @for (product of products; track $index) {
+        <div class="col-sm-3">
+          <div class="card">
+            <img class="img-class card-img-top" [src]="product.thumbnail" alt="Product image" height="100" width="100">
+            <h5 class="card-title" >{{product.title}}</h5>
+            <h6 class="card-text text-center">${{product.price}} ({{product.currency_id}})</h6>
+            <h6 class="card-text text-center" [ngClass]="getQuantityClass(product.available_quantity)">Disponible: {{product.available_quantity}}</h6>
+            <div class="card-body card-scrollable-body">
+              <p class="card-text">Vendedor: {{product.seller.nickname}}</p>
+              <p class="card-text" style="text-decoration: underline;">Atributos:</p>
+              <ul>
+                @for(attribute of product.attributes; track attribute.id){
+                  <li><p class="card-text">{{attribute.name}}: {{attribute.value_name}}</p></li>
+                }
+              </ul>
+            </div>
+            <div class="class-footer text-end">
+              <a [href]="product.permalink">Ir a la página del producto</a>
+            </div>
+          </div>
+        </div>
+      }
+    }
+    @else {
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
 </div>
 
